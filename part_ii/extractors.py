@@ -265,6 +265,8 @@ class LogRegEstimatorFeature(FeatureExtractor):
 
     def _feature_log_reg(self, df_window: pd.DataFrame) -> float:
         X, y, last_window = self._form_dataset(df_window)
+        if len(np.unique(y)) == 1:
+            return y[0]
         model = LogisticRegression()
         model.fit(X, y)
         estimate = model.predict(last_window)

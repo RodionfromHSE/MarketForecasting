@@ -14,3 +14,6 @@ Of course, my implementation is not perfect (especially in terms of performance)
 #### Training
 
 * Random Forest with top features
+* Linear Regression with top features
+
+The results are better than in part I, and it's even not all the features and not the whole dataset!
